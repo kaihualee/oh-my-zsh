@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git gradle ruby autojump osx mvn)
 
 # User configuration
 
@@ -78,3 +78,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# autojumo plugins
+# brew instal autojump
+#[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+
+# Customized Shell alias
+#OS=$( uname | tr '[:upper:]' '[:lower:]')
+#if [ -d $HOME/.bashrc.d ]; then
+#for SCRIPT in $( ls $HOME/.bashrc.d/${OS}/* ); do
+#    . ${SCRIPT}
+#done
+#fi
