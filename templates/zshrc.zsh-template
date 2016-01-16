@@ -45,11 +45,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gradle ruby autojump osx mvn)
+plugins=(git ruby autojump osx brew sublime)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/mysql-5.6.25-osx10.8-x86_64/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -80,13 +80,19 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # autojumo plugins
-# brew instal autojump
-#[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
 # Customized Shell alias
-#OS=$( uname | tr '[:upper:]' '[:lower:]')
-#if [ -d $HOME/.bashrc.d ]; then
-#for SCRIPT in $( ls $HOME/.bashrc.d/${OS}/* ); do
-#    . ${SCRIPT}
-#done
-#fi
+OS=$( uname | tr '[:upper:]' '[:lower:]')
+if [ -d $HOME/.bashrc.d ]; then
+for SCRIPT in $( ls $HOME/.bashrc.d/${OS}/* ); do
+    . ${SCRIPT}
+done
+fi
+
+if [ -d $HOME/.jenv ]; then
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+fi
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
