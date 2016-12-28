@@ -54,7 +54,10 @@ export MANPATH="/usr/local/man:$MANPATH"
 export PATH=$PATH:/usr/local/protobuf/bin
 export PKG_CONFIG_PATH=/usr/local/protobuf/lib/pkgconfig
 
+export WORKON_HOME=$HOME/.virtualenvs
+
 source $ZSH/oh-my-zsh.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -107,3 +110,5 @@ fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
+
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
