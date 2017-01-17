@@ -51,9 +51,8 @@ plugins=(git autojump osx brew sublime)
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
-export PATH=$PATH:/usr/local/protobuf/bin
-export PKG_CONFIG_PATH=/usr/local/protobuf/lib/pkgconfig
 
+#virtualwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 
 source $ZSH/oh-my-zsh.sh
